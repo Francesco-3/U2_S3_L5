@@ -36,7 +36,7 @@ async function loadProductDetails() {
                     <h5 class="text-muted">${p.brand}</h5>
                     <p class="mt-3">${p.description}</p>
                     <p class="fw-bold text-warning h4">€ ${p.price}</p>
-                    <button class="btn btn-success mt-3">Buy Now</button>
+                    <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#buyModal">Buy Now</button>
                   </div>
                 </div>
               </div>
@@ -51,3 +51,10 @@ async function loadProductDetails() {
 }
 
 loadProductDetails();
+
+function confirmPurchase() {
+  const modal = bootstrap.Modal.getInstance(document.getElementById('buyModal'));
+  modal.hide();
+
+  alert("Acquisto confermato! Grazie per aver scelto Guitar Store 🎸");
+}

@@ -61,10 +61,17 @@ const displayProducts = function(products) {
           <h5 class="card-title">${product.name}</h5>
           <p class="card-text fw-bold text-warning">€ ${product.price}</p>
           <a href="details.html?id=${product._id}" class="btn btn-outline-dark mt-auto">Details</a>
-          <button class="btn btn-success mt-2">Buy</button>
+          <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#buyModal">Buy</button>
         </div>
       </div>`;
 
     container.appendChild(col);
   });
+}
+
+function confirmPurchase() {
+  const modal = bootstrap.Modal.getInstance(document.getElementById('buyModal'));
+  modal.hide();
+
+  alert("Acquisto confermato! Grazie per aver scelto Guitar Store 🎸");
 }
