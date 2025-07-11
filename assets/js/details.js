@@ -56,5 +56,5 @@ function confirmPurchase() {
   const modal = bootstrap.Modal.getInstance(document.getElementById('buyModal'));
   modal.hide();
 
-  alert("Acquisto confermato! Grazie per aver scelto Guitar Store 🎸");
+  alert("Purchase confirmed! Thank you for choosing Guitar Store. 🎸");
 }
